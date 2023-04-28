@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>PodcastDetailsViewTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>PodcastViewControllerTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>PodcastsFeed.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>59CA222C29F9B5B000CA6CEE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59DDE97B29F9B2C600849E6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59DDE99129F9B2C700849E6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59DDE99B29F9B2C700849E6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59F2FFA929FA826F001EDA7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59F2FFB729FA8658001EDA7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
