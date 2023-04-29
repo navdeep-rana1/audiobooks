@@ -5,7 +5,7 @@
 
 # Audiobooks.com Dependency Diagram:
 
-![Alt text](/Images/AudioBooksDependencyDiagram.png "Audiobooks Overview")
+![Alt text](/Images/Podcasts-dependency-diagram.png "Audiobooks Overview")
 
 
 ### TDD Flow:
@@ -14,6 +14,22 @@ User launches app -> Expects to see latest podcasts fetched from internet
 App makes a request to the backend -> If response is succeess -> Decodes data -> Displays to user
 -> If request is not succesful -> Shows an error message
 ```
+
+```
+For persistence store, I have created an abstract interface with a collaborator 
+which can be easily replaced by any framework that we want to use. 
+By using interface for persisting user favourite podcast, we can
+inverse the dependency on the framework that we want to use. 
+Currently I am using `UserDefaults` as the project requires only
+peristing the podcast's ID. 
+```
+
+## Persistence Store:
+- ✅ Details screen opened -> Checks if a podcast is favourited or not
+- ✅ Details screen opened -> User clicks on Favourite Button when podcast is not already favourited -> Saves to Favourite 
+and title changes to "Favourited"
+- ✅ Details screen opened -> User clicks on Favourite button when podcast is already favourited -> Removes from Favourite
+
 
 ## Testing Pointer #1:
 - ✅ Assert that `PodcastLoader` doesn't make a request to client on init

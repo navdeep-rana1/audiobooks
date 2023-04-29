@@ -14,15 +14,17 @@ class PodcastDetailViewController: UIViewController {
     @IBOutlet weak var imagePodcast: UIImageView!
     @IBOutlet weak var buttonFavourite: UIButton!
     @IBOutlet weak var labelDescription: UILabel!
-    var model: Podcast?
+    var model: Podcast!
     var imageLoader: ImageLoader?
+    var podcastCache: PodcastCache?
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewObjects()
-        manageFavourite(isFromButton: false)
-        
+        podcastCache = PodcastCache(cacheStore: UserDefaultsCacheStore())
+        checkFavourite()
+
         labelTitle.text = model?.title
         labelAuthor.text = model?.publisher
         labelDescription.attributedText = model?.description.htmlAttributedString()
@@ -47,28 +49,29 @@ class PodcastDetailViewController: UIViewController {
     }
     
     @IBAction func actionFavourite(_ sender: UIButton) {
-        manageFavourite(isFromButton: true)
-        
+        podcastCache?.favouriteAction(podcastID: model.id, completion: { [weak self] result in
+            switch result{
+            case let .success(favResult):
+                if favResult{
+                    self?.buttonFavourite.setTitle("Favourited", for: .normal)
+                }else{
+                    self?.buttonFavourite.setTitle("Favourite", for: .normal)
+                }
+            case .failure(_):
+                break
+            }
+        })
     }
     
-    private func manageFavourite(isFromButton: Bool){
-        
-        guard let model = model else {return}
-        if UserDefaults.standard.bool(forKey: model.id) == true{
-            if isFromButton{ UserDefaults.standard.set(false, forKey: model.id)
-                buttonFavourite.setTitle("Favourite", for: .normal)
-            }else{
-                buttonFavourite.setTitle("Favourited", for: .normal)
+    private func checkFavourite(){
+        podcastCache?.isFavourite(podcastID: model.id, completion: { [weak self] result in
+            switch result{
+            case true:
+                self?.buttonFavourite.setTitle("Favourited", for: .normal)
+            case false:
+                self?.buttonFavourite.setTitle("Favourite", for: .normal)
             }
-        }else{
-            if isFromButton{ UserDefaults.standard.set(true, forKey: model.id)
-                buttonFavourite.setTitle("Favourited", for: .normal)
-            }else{
-                buttonFavourite.setTitle("Favourite", for: .normal)
-
-            }
-        }
-        
+        })
     }
     
     /*

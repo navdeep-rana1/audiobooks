@@ -54,9 +54,20 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "59F2FFC029FA8658001EDA7C"
+               BlueprintIdentifier = "59F2FFA929FA826F001EDA7C"
                BuildableName = "PodcastDetailsViewTests.xctest"
                BlueprintName = "PodcastDetailsViewTests"
+               ReferencedContainer = "container:PodcastsFeed.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "598441D329FC33B600BB4C4D"
+               BuildableName = "PodcastsCacheTests.xctest"
+               BlueprintName = "PodcastsCacheTests"
                ReferencedContainer = "container:PodcastsFeed.xcodeproj">
             </BuildableReference>
          </TestableReference>

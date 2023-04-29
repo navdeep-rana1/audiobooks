@@ -14,6 +14,10 @@
 		5934236B29FA4EC10048CAED /* PodcastListsComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934236A29FA4EC10048CAED /* PodcastListsComposer.swift */; };
 		5934236E29FA4FE80048CAED /* Podcast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5934236D29FA4FE80048CAED /* Podcast.storyboard */; };
 		598441B029FBCB1F00BB4C4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598441AF29FBCB1F00BB4C4D /* Main.storyboard */; };
+		598441D729FC33B600BB4C4D /* PodcastsCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598441D629FC33B600BB4C4D /* PodcastsCacheTests.swift */; };
+		59A1549529FD1E2C00EA0F29 /* PodcastCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A1549429FD1E2C00EA0F29 /* PodcastCache.swift */; };
+		59A1549929FD1FC000EA0F29 /* UserDefaultsCacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A1549829FD1FC000EA0F29 /* UserDefaultsCacheStore.swift */; };
+		59A1549B29FD247100EA0F29 /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A1549A29FD247100EA0F29 /* CacheStore.swift */; };
 		59CA222629F9B45A00CA6CEE /* Dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 59CA222529F9B45A00CA6CEE /* Dummy.json */; };
 		59CA222829F9B48D00CA6CEE /* PodcastFeedEndToEndAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CA222729F9B48D00CA6CEE /* PodcastFeedEndToEndAPITests.swift */; };
 		59CA223029F9B5B000CA6CEE /* PodcastsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CA222F29F9B5B000CA6CEE /* PodcastsListViewControllerTests.swift */; };
@@ -43,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		598441D829FC33B600BB4C4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59DDE97429F9B2C600849E6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59DDE97B29F9B2C600849E6F;
+			remoteInfo = PodcastsFeed;
+		};
 		59CA223129F9B5B000CA6CEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 59DDE97429F9B2C600849E6F /* Project object */;
@@ -97,6 +108,11 @@
 		5934236A29FA4EC10048CAED /* PodcastListsComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastListsComposer.swift; sourceTree = "<group>"; };
 		5934236D29FA4FE80048CAED /* Podcast.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Podcast.storyboard; sourceTree = "<group>"; };
 		598441AF29FBCB1F00BB4C4D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		598441D429FC33B600BB4C4D /* PodcastsCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodcastsCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		598441D629FC33B600BB4C4D /* PodcastsCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsCacheTests.swift; sourceTree = "<group>"; };
+		59A1549429FD1E2C00EA0F29 /* PodcastCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCache.swift; sourceTree = "<group>"; };
+		59A1549829FD1FC000EA0F29 /* UserDefaultsCacheStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsCacheStore.swift; sourceTree = "<group>"; };
+		59A1549A29FD247100EA0F29 /* CacheStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheStore.swift; sourceTree = "<group>"; };
 		59CA222529F9B45A00CA6CEE /* Dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dummy.json; sourceTree = "<group>"; };
 		59CA222729F9B48D00CA6CEE /* PodcastFeedEndToEndAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastFeedEndToEndAPITests.swift; sourceTree = "<group>"; };
 		59CA222D29F9B5B000CA6CEE /* PodcastsListViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodcastsListViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +153,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		598441D129FC33B600BB4C4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59CA222A29F9B5B000CA6CEE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,6 +260,24 @@
 			path = Default;
 			sourceTree = "<group>";
 		};
+		598441D529FC33B600BB4C4D /* PodcastsCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				598441D629FC33B600BB4C4D /* PodcastsCacheTests.swift */,
+			);
+			path = PodcastsCacheTests;
+			sourceTree = "<group>";
+		};
+		59A1549329FD1DDD00EA0F29 /* Cache Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				59A1549429FD1E2C00EA0F29 /* PodcastCache.swift */,
+				59A1549829FD1FC000EA0F29 /* UserDefaultsCacheStore.swift */,
+				59A1549A29FD247100EA0F29 /* CacheStore.swift */,
+			);
+			path = "Cache Protocol";
+			sourceTree = "<group>";
+		};
 		59CA222E29F9B5B000CA6CEE /* PodcastsListViewControllerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +362,7 @@
 				59CA222E29F9B5B000CA6CEE /* PodcastsListViewControllerTests */,
 				59F2FFAB29FA826F001EDA7C /* PodcastDetailsViewTests */,
 				59F2FFB929FA8658001EDA7C /* PodcastDetailsView */,
+				598441D529FC33B600BB4C4D /* PodcastsCacheTests */,
 				59DDE97D29F9B2C600849E6F /* Products */,
 				22704428C61BD7BA27281BD9 /* Pods */,
 				137DEF24C5386E352BF8C094 /* Frameworks */,
@@ -335,6 +377,7 @@
 				59DDE99C29F9B2C700849E6F /* PodcastsFeedUITests.xctest */,
 				59CA222D29F9B5B000CA6CEE /* PodcastsListViewControllerTests.xctest */,
 				59F2FFAA29FA826F001EDA7C /* PodcastDetailsViewTests.xctest */,
+				598441D429FC33B600BB4C4D /* PodcastsCacheTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,6 +426,7 @@
 		59DDE9B029F9B34F00849E6F /* Podcast Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				59A1549329FD1DDD00EA0F29 /* Cache Protocol */,
 				59DD1A1529FBC6F500510298 /* Podcast Loader */,
 				59DD1A1429FBC6BC00510298 /* Podcast Client */,
 				59DD1A1129FBC66A00510298 /* Image Loader */,
@@ -418,6 +462,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		598441D329FC33B600BB4C4D /* PodcastsCacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 598441DA29FC33B600BB4C4D /* Build configuration list for PBXNativeTarget "PodcastsCacheTests" */;
+			buildPhases = (
+				598441D029FC33B600BB4C4D /* Sources */,
+				598441D129FC33B600BB4C4D /* Frameworks */,
+				598441D229FC33B600BB4C4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				598441D929FC33B600BB4C4D /* PBXTargetDependency */,
+			);
+			name = PodcastsCacheTests;
+			productName = PodcastsCacheTests;
+			productReference = 598441D429FC33B600BB4C4D /* PodcastsCacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		59CA222C29F9B5B000CA6CEE /* PodcastsListViewControllerTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59CA223329F9B5B000CA6CEE /* Build configuration list for PBXNativeTarget "PodcastsListViewControllerTests" */;
@@ -523,6 +585,10 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					598441D329FC33B600BB4C4D = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 59DDE97B29F9B2C600849E6F;
+					};
 					59CA222C29F9B5B000CA6CEE = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 59DDE97B29F9B2C600849E6F;
@@ -563,11 +629,19 @@
 				59DDE99B29F9B2C700849E6F /* PodcastsFeedUITests */,
 				59CA222C29F9B5B000CA6CEE /* PodcastsListViewControllerTests */,
 				59F2FFA929FA826F001EDA7C /* PodcastDetailsViewTests */,
+				598441D329FC33B600BB4C4D /* PodcastsCacheTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		598441D229FC33B600BB4C4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59CA222B29F9B5B000CA6CEE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -715,6 +789,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		598441D029FC33B600BB4C4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				598441D729FC33B600BB4C4D /* PodcastsCacheTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59CA222929F9B5B000CA6CEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -737,13 +819,16 @@
 				59DDE98229F9B2C600849E6F /* SceneDelegate.swift in Sources */,
 				59DDE9B929F9B35000849E6F /* RemotePodcastClient.swift in Sources */,
 				59DDE9B829F9B35000849E6F /* PodcastLoader.swift in Sources */,
+				59A1549929FD1FC000EA0F29 /* UserDefaultsCacheStore.swift in Sources */,
 				59CA223B29F9BECE00CA6CEE /* PodcastCell.swift in Sources */,
 				5934236629FA46040048CAED /* PodcastLoaderViewController.swift in Sources */,
 				59DD1A0E29FBB6E500510298 /* PodcastsListViewControllerFooterView.swift in Sources */,
 				59DDE9B729F9B35000849E6F /* PodcastClient.swift in Sources */,
+				59A1549529FD1E2C00EA0F29 /* PodcastCache.swift in Sources */,
 				59DD1A1329FBC68D00510298 /* ImageLoader.swift in Sources */,
 				59DD1A0C29FBAD1800510298 /* HTMLAttributedString.swift in Sources */,
 				59F2FFA529FA81E0001EDA7C /* PodcastDetailViewController.swift in Sources */,
+				59A1549B29FD247100EA0F29 /* CacheStore.swift in Sources */,
 				5934236829FA47910048CAED /* PodcastCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,6 +862,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		598441D929FC33B600BB4C4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59DDE97B29F9B2C600849E6F /* PodcastsFeed */;
+			targetProxy = 598441D829FC33B600BB4C4D /* PBXContainerItemProxy */;
+		};
 		59CA223229F9B5B000CA6CEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 59DDE97B29F9B2C600849E6F /* PodcastsFeed */;
@@ -811,6 +901,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		598441DB29FC33B600BB4C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4E59WA6F2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heyhub.PodcastsCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PodcastsFeed.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PodcastsFeed";
+			};
+			name = Debug;
+		};
+		598441DC29FC33B600BB4C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4E59WA6F2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heyhub.PodcastsCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PodcastsFeed.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PodcastsFeed";
+			};
+			name = Release;
+		};
 		59CA223429F9B5B000CA6CEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1151,6 +1277,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		598441DA29FC33B600BB4C4D /* Build configuration list for PBXNativeTarget "PodcastsCacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				598441DB29FC33B600BB4C4D /* Debug */,
+				598441DC29FC33B600BB4C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		59CA223329F9B5B000CA6CEE /* Build configuration list for PBXNativeTarget "PodcastsListViewControllerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
